@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;500&display=swap");
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root {
+    --blue-bg: hsl(205, 70%, 77%);
+    --black-btn: hsl(210, 29%, 24%);
+    --light-greyish-blue: hsl(0, 0%, 97%);
+    --light-green: hsl(145, 63%, 49%);
+    --light-meroon: hsl(6, 78%, 57%);
+    --font-karla: "Karla", sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-karla);
+    background-color: var(--blue-bg);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+main {
+    width: 90%;
+    max-width: 26rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 12px 8px rgba(71, 108, 146, 0.1);
+}
+
+.form_heading {
+    background-color: var(--light-greyish-blue);
+    padding: 1.2rem 3rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+form {
+    background-color: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 100%;
+    margin: auto;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-element {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+i {
+    position: absolute;
+    top: 3.15rem;
+    right: 0.6rem;
+}
+
+label {
+    margin-top: 0.6rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+small,
+i {
+    color: var(--light-meroon);
+    margin: 2px;
+    visibility: hidden;
+}
+
+input {
+    border: 2px solid hsl(0, 0%, 80%);
+    height: 2.6rem;
+    font-family: inherit;
+    font-size: 1rem;
+    margin-top: 6px;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+textarea {
+    border: 2px solid hsl(0, 0%, 80%);
+    font-family: inherit;
+    font-size: 1rem;
+    margin-top: 6px;
+    padding: 1rem;
+    border-radius: 4px;
+    resize: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.textmsg {
+    visibility: visible;
+    color: hsl(0, 0%, 80%);
+    position: absolute;
+    bottom: 0.2rem;
+    right: 0.5rem;
+}
+
+input[type="submit"] {
+    background-color: var(--black-btn);
+    font-size: 1.2rem;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    margin-top: 1.2rem;
+    padding: 0;
+}
+
+.input-element.success input {
+    border-color: var(--light-green);
+}
+
+.input-element.success i.fa-circle-check {
+    visibility: visible;
+    color: var(--light-green);
+}
+
+.input-element.success small {
+    visibility: hidden;
+}
+
+.input-element.error input {
+    border-color: var(--light-meroon);
+}
+
+.input-element.error i.fa-circle-exclamation {
+    visibility: visible;
+    color: var(--light-meroon);
+}
+
+.input-element.error small {
+    visibility: visible;
+}
+
+@media screen and (max-height: 860px) {
+    body {
+        height: auto;
+        width: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
